@@ -1,0 +1,77 @@
+{
+  "categories": ["Bakso", "Mie", "Topping", "Minuman"],
+  "items": [
+    {
+      "id": "bakso-sapi",
+      "name": "Bakso Sapi",
+      "category": "Bakso",
+      "price": 18000,
+      "desc": "Bakso sapi kenyal, kuah gurih.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    },
+    {
+      "id": "bakso-campur",
+      "name": "Bakso Campur",
+      "category": "Bakso",
+      "price": 22000,
+      "desc": "Bakso sapi kenyal dengan sayuran.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    },
+    {
+      "id": "mie-ayam-bakso",
+      "name": "Mie Ayam Bakso",
+      "category": "Mie",
+      "price": 22000,
+      "desc": "Mie ayam manis gurih + bakso.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg"
+    },
+    {
+      "id": "mie-ayam",
+      "name": "Mie Ayam",
+      "category": "Mie",
+      "price": 22000,
+      "desc": "Mie ayam manis gurih.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg"
+    },
+    {
+      "id": "kacang",
+      "name": "Kacang",
+      "category": "Topping",
+      "price": 6000,
+      "desc": "Renyah pendamping kuah bakso.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    },
+    {
+      "id": "kerupuk-kulit",
+      "name": "Kerupuk Kulit",
+      "category": "Topping",
+      "price": 6000,
+      "desc": "Renyah pendamping kuah bakso.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    },
+    {
+      "id": "kerupuk-putih",
+      "name": "Kerupuk Putih",
+      "category": "Topping",
+      "price": 6000,
+      "desc": "Renyah pendamping kuah bakso.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    },
+    {
+      "id": "es-teh",
+      "name": "Es Teh Manis",
+      "category": "Minuman",
+      "price": 6000,
+      "desc": "Teh manis penyegar.",
+      "spicy": false,
+      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    }
+  ]
+}
