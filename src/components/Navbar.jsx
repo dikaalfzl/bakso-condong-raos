@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = ({ brand, phone }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout, loading } = useAuth();
+  const navigate = useNavigate();
 
   const navLinks = [
     { href: '#beranda', label: 'Beranda' },
@@ -15,6 +19,15 @@ const Navbar = ({ brand, phone }) => {
     const cleaned = String(phone).replace(/[^0-9]/g, '');
     window.open(`https://wa.me/${cleaned}`, '_blank');
   };
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
+
+  if (loading) {
+    return null; // Or a loading spinner
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
@@ -35,13 +48,24 @@ const Navbar = ({ brand, phone }) => {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={handleWhatsApp}
-                className="btn-primary flex items-center gap-2 text-sm"
-              >
-                <MessageCircle size={16} />
-                Chat WhatsApp
-              </button>
+              {user ? (
+                <>
+                  <button
+                    onClick={handleLogout}
+                    className="btn-primary flex items-center gap-2 text-sm"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  className="btn-primary flex items-center gap-2 text-sm"
+                >
+                  Login
+                </Link>
+              )}
+              
             </div>
           </div>
 
@@ -68,13 +92,25 @@ const Navbar = ({ brand, phone }) => {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={handleWhatsApp}
-                className="btn-primary w-full flex items-center justify-center gap-2 mt-4"
-              >
-                <MessageCircle size={16} />
-                Chat WhatsApp
-              </button>
+              {user ? (
+                <>
+                  <button
+                    onClick={handleLogout}
+                    className="btn-primary w-full flex items-center justify-center gap-2 mt-2"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="btn-primary w-full flex items-center justify-center gap-2 mt-4"
+                >
+                  Login
+                </Link>
+              )}
+              
             </div>
           </div>
         )}

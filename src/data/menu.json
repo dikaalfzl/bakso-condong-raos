@@ -68,10 +68,37 @@
       "id": "es-teh",
       "name": "Es Teh Manis",
       "category": "Minuman",
-      "price": 6000,
+      "price": 5000,
       "desc": "Teh manis penyegar.",
       "spicy": false,
-      "img": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+      "img": "estehmanis.webp"
+    },
+    {
+      "id": "teh-botol",
+      "name": "Teh Botol Sosro",
+      "category": "Minuman",
+      "price": 5000,
+      "desc": "Teh manis penyegar.",
+      "spicy": false,
+      "img": "./Teh_Botol_Sosro.webp"
+    },
+    {
+      "id": "fruit-tea",
+      "name": "Fruit Tea",
+      "category": "Minuman",
+      "price": 5000,
+      "desc": "Teh manis penyegar.",
+      "spicy": false,
+      "img": "./Teh_Botol_Sosro.webp"
+    },
+    {
+      "id": "tebs",
+      "name": "Tebs",
+      "category": "Minuman",
+      "price": 5000,
+      "desc": "Teh manis penyegar.",
+      "spicy": false,
+      "img": "./Teh_Botol_Sosro.webp"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import MenuCard from './MenuCard';
 
-const MenuGrid = ({ items, brand, phone }) => {
+const MenuGrid = ({ items, onItemClick }) => {
   if (items.length === 0) {
     return (
       <div className="text-center py-12">
@@ -15,8 +15,7 @@ const MenuGrid = ({ items, brand, phone }) => {
         <MenuCard
           key={item.id}
           item={item}
-          brand={brand}
-          phone={phone}
+          onItemClick={onItemClick}
         />
       ))}
     </div>
